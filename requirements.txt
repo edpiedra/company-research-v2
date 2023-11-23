@@ -1,0 +1,19 @@
+copy finnlp folder downloaded from https://github.com/AI4Finance-Foundation/FinNLP/tree/main into the workspace folder.
+
+pip install:
+- pandas
+- nltk
+- spacy
+- scikit-learn
+- textblob
+- finnhub-python
+- yfinance
+- selenium
+- beautifulsoup4
+- furl
+- dash
+- dash-bootstrap-components
+- parsel
+
+
+python -m spacy download en_core_web_lg
