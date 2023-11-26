@@ -244,7 +244,7 @@ class DataAnalysis():
                 for field in data:
                     data[field].append(article[field])
                 
-                self.file_contents = article["summary"]
+                self.file_contents = summary
                 self._run_through_nlp_models()
                 
                 results["textblob_polarity"].append(self.textblob.polarity) 

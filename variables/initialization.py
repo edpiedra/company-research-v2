@@ -50,3 +50,11 @@ import dash, webbrowser
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
+
+#FINGPT LIBRARIES
+
+os.environ["TRANSFORMERS_CACHE"] = "u:/huggingface/cache/"
+
+from transformers import AutoModel, AutoTokenizer 
+from peft import PeftModel 
+import torch 

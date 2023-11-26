@@ -14,6 +14,9 @@ pip install:
 - dash
 - dash-bootstrap-components
 - parsel
+- transformers==4.30.0
+- peft 
+- sentencepiece
 
 
 python -m spacy download en_core_web_lg
