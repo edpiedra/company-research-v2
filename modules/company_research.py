@@ -43,15 +43,26 @@ class CompanyResearch():
         webbrowser.open_new("http://127.0.0.1:8050")
         
         @self.app.callback(
-            Output("description", "value"),
-#            Output("historical graph", "figure"),
+            Output("sector text", "children"),
+            Output("industry text", "children"),
+            Output("business summary text", "value"),
+#            Output("market data graph", "figure"),
+            Output("earnings call graph", "figure"),
+            Output("insider sentiment graph", "figure"),
+#            Output("earnings surprises graph", "figure"),
+            Output("yahoo news graph", "figure"),
             Input("ticker dropdown", "value")
         )
         def _update_company_research(ticker):
-            self.downloads.ticker = ticker.upper()
-            self.downloads.run()
+#            self.downloads.ticker = ticker.upper()
+#            self.downloads.run()
             
-            self.analysis.ticker = ticker.upper()
-            self.analysis.data_analysis()
+#            self.analysis.ticker = ticker.upper()
+#            self.analysis.data_analysis()
             
-            return "description"
+            self.gui.ticker = ticker.upper()
+            self.gui.create_screen()
+            
+            return self.gui.sector, self.gui.industry, self.gui.business_summary, \
+                self.gui.earnings_calls_graph, self.gui.insider_sentiments, \
+                    self.gui.yahoo_news
